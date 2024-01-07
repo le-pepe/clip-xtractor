@@ -1,4 +1,4 @@
-appId: com.electron.app
+appId: xyz.lepepe.clipxtractor
 productName: 'Clip Xtractor'
 directories:
   buildResources: build
@@ -35,7 +35,7 @@ linux:
     - AppImage
     - snap
     - deb
-  maintainer: electronjs.org
+  maintainer: lepepe.xyz
   category: Utility
 appImage:
   artifactName: ${name}-${version}.${ext}

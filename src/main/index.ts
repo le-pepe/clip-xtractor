@@ -73,25 +73,59 @@ function registerListeners() {
 }
 
 function makeClipVideo(data, event) {
+    const isPackaged = app.isPackaged;
+    const rootPath = appRootDir.get().replace('app.asar', '');
+    const platform = getPlatform() || 'win';
+    const execPath = isPackaged ?
+        join(rootPath, platform) :
+        join(rootPath, 'resources', platform);
 
-    const execPath = isProd ?
-        join(dirname(appRootDir.get()), 'resources', 'bin') :
-        join(appRootDir.get(), 'resources', getPlatform());
+
 
     const cmd = `${join(execPath, 'ffmpeg')}`;
+    console.log("final path", cmd)
     const clipLength = data.end - data.start;
     const clipPath = join(dirname(data.path), basename(data.name));
     if (existsSync(clipPath)) {
         event.reply('clip-exists', clipPath);
         return;
     }
-    execFile(cmd, ["-ss", data.start, "-i", data.path, "-c", "copy", "-to", clipLength, clipPath], (err, stdout, stderr) => {
+
+    const {originalSize, cropData: crop} = data;
+
+    const ratioWidth = originalSize.width / 828;
+    const ratioHeight = originalSize.height / 466;
+
+    const calculatedCrop = {
+        width: crop.width * ratioWidth,
+        height: crop.height * ratioHeight,
+        x: crop.x * ratioWidth,
+        y: crop.y * ratioHeight
+    }
+
+    const args = {
+        first: "-ss",
+        second: data.start,
+        third: "-i",
+        fourth: data.path,
+        fifth: "-filter:v",
+        sixth: "crop=" + calculatedCrop.width + ":" + calculatedCrop.height + ":" + calculatedCrop.x + ":" + calculatedCrop.y,
+        seventh: "-c:a",
+        eighth: "copy",
+        ninth: "-to",
+        tenth: clipLength,
+        eleventh: clipPath
+    }
+
+    execFile(cmd, Object.values(args), (err, stdout, stderr) => {
         if (err) {
             event.reply('clip-error', err);
             return;
         }
         event.reply('extracted', clipPath);
     });
+
+
 }
 
 // This method will be called when Electron has finished

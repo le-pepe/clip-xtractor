@@ -1,10 +1,10 @@
 {
-  "name": "mplayer",
-  "version": "1.0.0",
-  "description": "An Electron application with Vue and TypeScript",
+  "name": "clip-xtractor",
+  "version": "1.1.2",
+  "description": "Simple tool to extract clips from videos",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://www.electronjs.org",
+  "author": "le-pepe",
+  "homepage": "https://github.com/le-pepe/clip-xtractor",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --fix",
@@ -25,6 +25,7 @@
     "@vueform/slider": "^2.1.10",
     "app-root-dir": "^1.0.2",
     "autoprefixer": "^10.4.16",
+    "cropperjs": "^1.6.1",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.0"
   },
