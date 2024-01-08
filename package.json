@@ -1,6 +1,7 @@
 {
   "name": "clip-xtractor",
   "version": "1.1.2",
+  "license": "MIT",
   "description": "Simple tool to extract clips from videos",
   "main": "./out/main/index.js",
   "author": "le-pepe",

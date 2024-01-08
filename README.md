@@ -1,10 +1,25 @@
-# mplayer
+# Clip Xtractor
+
+![GitHub license](https://img.shields.io/github/license/le-pepe/clip-xtractor)
 
 An Electron application with Vue and TypeScript
 
-## Recommended IDE Setup
+# Prerequisites
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+Before you begin, you need to download FFmpeg and add to resources folder by OS.
+
+> https://ffbinaries.com/downloads
+
+```
+- resources
+    - linux
+        - ffmpeg
+    - mac
+        - ffmpeg
+    - win
+        - ffmpeg.exe
+```
+
 
 ## Project Setup
 
@@ -20,7 +35,19 @@ $ yarn
 $ yarn dev
 ```
 
+
 ### Build
+
+You need to compile **TailwindCSS** for dev .
+
+```bash
+$ npx tailwindcss -i .\src\renderer\src\assets\css\styles.css -o .\src\renderer\src\assets\css\app.css --watch --minify
+````
+
+> Before build, you need to build vue project.
+```bash
+$ electron-vite build
+```
 
 ```bash
 # For windows
