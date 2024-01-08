@@ -59,3 +59,8 @@ $ yarn build:mac
 # For Linux
 $ yarn build:linux
 ```
+# TODO
+- [ ] Test on physical linux and mac devices
+- [ ] Add tests
+- [ ] Improve UI
+- [ ] Add more options
