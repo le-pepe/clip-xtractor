@@ -2,7 +2,7 @@
 
 ![GitHub license](https://img.shields.io/github/license/le-pepe/clip-xtractor)
 
-An Electron application with Vue and TypeScript
+Simple tool to extract clips from video files.
 
 # Prerequisites
 
