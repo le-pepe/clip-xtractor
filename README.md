@@ -66,6 +66,7 @@ $ yarn build:linux
 ![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_3.png)
 
 # TODO
+- [ ] Create Logo
 - [ ] Test on physical linux and mac devices
 - [ ] Add tests
 - [ ] Improve UI
