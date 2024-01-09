@@ -59,6 +59,12 @@ $ yarn build:mac
 # For Linux
 $ yarn build:linux
 ```
+# Screenshots
+
+![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_1.png)
+![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_2.png)
+![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_3.png)
+
 # TODO
 - [ ] Test on physical linux and mac devices
 - [ ] Add tests
