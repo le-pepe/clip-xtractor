@@ -1,73 +1,96 @@
 # Clip Xtractor
-
 ![GitHub license](https://img.shields.io/github/license/le-pepe/clip-xtractor)
 
-Simple tool to extract clips from video files.
+**Effortlessly extract clips from your videos!** ✂️
 
-# Prerequisites
+**Description:**
 
-Before you begin, you need to download FFmpeg and add to resources folder by OS.
+* **Simple and intuitive interface for easy clip extraction.**
+* **Supports various video formats as input.**
+* **Standalone application, no external dependencies required.**
 
-> https://ffbinaries.com/downloads
+**Prerequisites:**
 
-```
-- resources
-    - linux
-        - ffmpeg
-    - mac
-        - ffmpeg
-    - win
-        - ffmpeg.exe
-```
+1. **Download FFmpeg:** [https://ffbinaries.com/downloads](https://ffbinaries.com/downloads)
+2. **Place FFmpeg in the `resources` folder:**
 
+   ```
+   resources/
+   ├── linux/ffmpeg
+   ├── mac/ffmpeg
+   └── win/ffmpeg.exe
+   ```
 
-## Project Setup
+**Installation:**
 
-### Install
+1. **Clone the repository:**
 
-```bash
-$ yarn
-```
+   ```bash
+   git clone https://github.com/le-pepe/clip-xtractor.git
+   ```
 
-### Development
+2. **Install dependencies:**
 
-```bash
-$ yarn dev
-```
+   ```bash
+   cd clip-xtractor
+   yarn
+   ```
 
+**Development:**
 
-### Build
+1. **Start the development server:**
 
-You need to compile **TailwindCSS** for dev .
+   ```bash
+   yarn dev
+   ```
 
-```bash
-$ npx tailwindcss -i .\src\renderer\src\assets\css\styles.css -o .\src\renderer\src\assets\css\app.css --watch --minify
-````
+**Build:**
 
-> Before build, you need to build vue project.
-```bash
-$ electron-vite build
-```
+1. **Compile TailwindCSS:**
 
-```bash
-# For windows
-$ yarn build:win
+   ```bash
+   yarn tailwindcss -i ./src/renderer/src/assets/css/styles.css -o ./src/renderer/src/assets/css/app.css --watch --minify
+   npx tailwindcss -i ./src/renderer/src/assets/css/styles.css -o ./src/renderer/src/assets/css/app.css --watch --minify
+   ```
 
-# For macOS
-$ yarn build:mac
+2. **Build the Vue project:**
 
-# For Linux
-$ yarn build:linux
-```
-# Screenshots
+   ```bash
+   electron-vite build
+   ```
+
+3. **Package for your platform:**
+
+   ```bash
+   # Windows
+   yarn build:win
+
+   # macOS
+   yarn build:mac
+
+   # Linux
+   yarn build:linux
+   ```
+
+**Screenshots:**
 
 ![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_1.png)
 ![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_2.png)
 ![Screenshot](./src/renderer/src/assets/imgs/clip-xtractor_3.png)
 
-# TODO
-- [ ] Create Logo
-- [ ] Test on physical linux and mac devices
-- [ ] Add tests
-- [ ] Improve UI
-- [ ] Add more options
+
+**Roadmap:**
+
+- **Create a Logo**
+- **Test on physical Linux and macOS devices**
+- **Add tests**
+- **Improve UI**
+- **Add more options for customization**
+
+**Contributing:**
+
+Pull requests are welcome! Please follow the project's coding style and guidelines.
+
+**License:**
+
+MIT
