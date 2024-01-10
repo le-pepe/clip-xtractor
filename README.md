@@ -7,7 +7,6 @@
 
 * **Simple and intuitive interface for easy clip extraction.**
 * **Supports various video formats as input.**
-* **Standalone application, no external dependencies required.**
 
 **Prerequisites:**
 
